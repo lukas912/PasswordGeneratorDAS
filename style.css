@@ -1,5 +1,5 @@
 .myform {
-    background-color: #29b6f6;
+    background-color: #ffffff;
     padding: 10px;
     margin-top: 25px;
     border-radius: 4px;
@@ -12,3 +12,17 @@
 .cbtext {
     color: black !important;
 }
+
+body {
+    background-color: #1f1f1f;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: rgb(255, 255, 255);
+    background: #00e676;
+  }
+  
+  ::selection {
+    color: rgb(255, 255, 255);
+    background: #00e676;
+  }

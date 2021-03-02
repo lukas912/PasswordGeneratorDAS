@@ -1,4 +1,7 @@
-<?php    
+<?php   
+
+error_reporting(0);
+ini_set('display_errors', 0);
 
 function generateRandomString($length, $alphabet) {
     $charactersLength = strlen($alphabet);
@@ -9,9 +12,7 @@ function generateRandomString($length, $alphabet) {
     return $randomString;
 }
 
-    $length = $_POST['length'];
-    $count = $_POST['count'];
-    $alphabet = $_POST['alphabet'];
+
 
     //echo $length . " " . $count . " " . $alphabet;
     /*for($i = 0; $i < $count; $i++) {
@@ -53,41 +54,46 @@ function generateRandomString($length, $alphabet) {
 
         <p>
             <label class="cbtext">
-                <input class="cbtext" type="checkbox" id="uppercase" />
+                <input class="cbtext" type="checkbox" id="uppercase" checked="true"/>
                  <span class="cbtext">Alle Großbuchstaben</span>
              </label>
         </p>
 
         <p>
             <label>
-                <input type="checkbox" id="lowercase" />
+                <input type="checkbox" id="lowercase" checked="true" />
                  <span class="cbtext">Alle Kleinbchstaben</span>
              </label>
         </p>
 
         <p>
             <label>
-                <input type="checkbox" id="digits" />
+                <input type="checkbox" id="digits" checked="true"/>
                  <span class="cbtext">Alle Ziffern</span>
              </label>
         </p>
 
         <p>
             <label>
-                <input type="checkbox" id="special" />
-                 <span class="cbtext">Sonderzeichen</span>
+                <input type="checkbox" id="special" checked="true" />
+                 <span class="cbtext" >Sonderzeichen</span>
              </label>
         </p>
 
-        <button class="btn waves-effect waves-light grey lighten-5 submitbutton" type="submit" name="action">generate
+        <button class="btn waves-effect waves-light green accent-3 submitbutton" type="submit" name="action">generate
             <i class="material-icons right">send</i>
         </button>
         <br><br>
 
-        <h5>Generierte Passwörter: </h5>
+        <h5>Generated Passwords: </h5>
 
         <p>
         <?php
+
+        $length = $_POST['length'];
+        $count = $_POST['count'];
+        $alphabet = $_POST['alphabet'];
+
         if(isset($count)) {
             echo $count . " Passwörter mit der Länge von " . $length . " Zeichen wurden erstellt";
         }

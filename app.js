@@ -41,3 +41,5 @@ $('#special').change(function() {
         $("#alph").val(value);
     }
 });
+
+$("#alph").val("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!$%?-_");
