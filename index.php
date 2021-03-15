@@ -48,8 +48,8 @@ function generateRandomString($length, $alphabet) {
     <div class="container myform z-depth-2">
     <form action="index.php" method="post">
         <h4>Password Generator</h4>
-        <p>Länge:<br><input value="12" type="text" name="length" size="30"></p>
-        <p>Anzahl:<br><input value="10" type="text" name="count" size="30"></p>
+        <p>Länge:<br><input value="12" type="text" name="length" size="30" maxlength="2"></p>
+        <p>Anzahl:<br><input value="10" type="text" name="count" size="30" maxlength="2"></p>
         <p>Alphabet:<br><input id="alph" type="text" name="alphabet" size="30"></p>
 
         <p>
